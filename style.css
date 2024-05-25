@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('box.png');
+    background-size: 40%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: 10px;
+    background: transparent;
+}
+
+header .container {
+    height: 10vh;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+.logo img {
+    height: 70px;
+    width: 130px;
+}
+
+.logo p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: default;
+}
+
+ul,
+ul li {
+    font-family: 'Times New Roman', Times, serif; /* Change font family */
+}
+
+ul {
+    display: flex;
+    gap: 14px;
+    list-style: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+li {
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+}
+
+.main {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.main img {
+    width: 800px;
+    height: 1500px;
+    filter: drop-shadow(20px 20px 40px rgb(0, 0, 0));
+    margin-top: -20px;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    margin-left: 20px;
+}
+
+.content .container {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: auto;
+    justify-content: center;
+    align-items: left;
+    margin-top: 40px;
+}
+
+.todo {
+    cursor: url("Quill.jpg") 6 19, auto;
+    display: flex;
+    padding: 14px;
+}
+
+.todo_value {
+    cursor: inherit;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    flex-grow: 1;
+    border-bottom: 2px solid rgb(94, 41, 21);
+}
+
+.todo_checkbox {
+}
+
+.todo:has(.todo_checkbox:checked) {
+    color: rgb(84, 35, 0);
+    background: rgb(0, 0, 0, 0.13);
+    text-decoration: line-through 1.5px;
+    order: 1;
+}
